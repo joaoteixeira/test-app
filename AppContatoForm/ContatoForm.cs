@@ -28,7 +28,7 @@ namespace AppContatoForm
                 "user=root;password=root;port=3360";
 
             _conexao = new MySqlConnection(conexaoString);
-            _conexao.Open();
+            //_conexao.Open();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace AppContatoForm
             var email = txtEmail.Text;
 
             var sql = "INSERT INTO contato (data_nasc_con, nome_con, email_con) " +
-                "VALUES ('1986-11-13', @_nome, @_email)";
+                "VALUES ('', @_nome, @_email)";
             var comando = new MySqlCommand(sql, _conexao);
 
             comando.Parameters.AddWithValue("@_nome", nome);
