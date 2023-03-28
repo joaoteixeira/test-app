@@ -28,7 +28,7 @@ namespace AppContatoForm
                 "user=root;password=root;port=3360";
 
             _conexao = new MySqlConnection(conexaoString);
-            //_conexao.Open();
+            _conexao.Open();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
